@@ -1,3 +1,5 @@
+
+
 def sort_string_by_frequency(input_string):
     # Create a dictionary to store the frequency of each character in the input string
     char_freq = {}
@@ -16,3 +18,21 @@ def sort_string_by_frequency(input_string):
         final_string += char * char_freq[char]
     
     return final_string
+
+print(sort_string_by_frequency("abc adfsdfsd"))
+
+def test_sort_string_by_frequency():
+    # Test case 1: Empty string
+    assert sort_string_by_frequency("") == ""
+    
+    # Test case 2: String with one character
+    assert sort_string_by_frequency("a") == "a"
+    
+    # Test case 3: String with repeated characters
+    assert sort_string_by_frequency("aaabbbccc") == "aaabbbccc"
+    
+    # Test case 4: String with mixed characters
+    assert sort_string_by_frequency("abcabcabc") == "aaabbbccc"
+  
+
+test_sort_string_by_frequency()
